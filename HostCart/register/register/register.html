@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: wheat;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .wrapper {
+            width: 400px;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+
+        .wrapper .input-data {
+            height: 40px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 20px; /* Added space between input fields */
+        }
+
+        .wrapper .input-data input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid silver;
+            box-shadow: blanchedalmond;
+            transition: border 0.3s ease;
+        }
+
+        .input-data input:focus {
+            outline: none;
+            border-bottom: 2px solid #4158d0;
+        }
+
+        .input-data input:focus ~ label,
+        .input-data input:valid ~ label {
+            transform: translateY(-20px);
+            font-size: 15px;
+            color: #4158d0;
+        }
+
+        .wrapper .input-data label {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            color: gray;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        button{
+            color: #030304;
+            background-color: rgb(237, 111, 15);
+            width: 100px;
+            align-items: center;
+        }
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Register</h2>
+        <div class="input-data">
+            <input type="text" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-data">
+            <input type="email" required>
+            <label>Email</label>
+        </div>
+
+        <div class="input-data">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+
+        <div class="input-data">
+            <input type="password" required>
+            <label>Confirm Password</label>
+        </div>
+        <button type="submit">Register</button>
+    </div>
+</body>
+</html>
